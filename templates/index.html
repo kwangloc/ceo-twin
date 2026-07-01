@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>V-CEO Dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/static/style.css" />
+
+  <!-- Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+<div class="dashboard">
+  <aside class="sidebar">
+    <div class="brand">
+      <img src="/static/vsf.jpg" alt="VSF Logo" class="brand-logo" />
+      <div>
+        <h2><span class="brand-v">V</span>-CEO</h2>
+      </div>
+    </div>
+
+    <nav>
+      <a class="active">Bảng tổng quan</a>
+      <a>Danh Mục Dự Án</a>
+      <a>Phê Duyệt & Ngân Sách</a>
+      <a>Nguồn Lực Nhân Sự</a>
+      <a>Cài Đặt</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <header class="header">
+      <div>
+        <h1>Dashboard V-CEO</h1>
+        <p>Theo dõi công việc, dự án, lịch họp và quyết định trong ngày</p>
+      </div>
+
+      <div class="header-right">
+        <div class="director-badge">
+            <img
+            src="/static/avatar.png"
+            alt="Director Avatar"
+            class="director-avatar"
+            />
+            <span>Dir. Nguyen Van A</span>
+        </div>
+
+        <div class="header-time">Cập nhật: 08:45, Thứ 3</div>
+        </div>
+    </header>
+
+    <section class="overview-panels">
+      <div class="card compact-card email-card">
+        <div class="compact-top">
+          <h3>✉ 3 emails mới nhất</h3>
+          <a class="schedule-link">Mở hộp thư <span>→</span></a>
+        </div>
+        <div class="email-list">
+          <div class="email-item">
+            <div class="email-header">
+              <strong>Ban Công Nghệ VinFast</strong>
+              <span>08:17</span>
+            </div>
+            <p>Đề nghị đánh giá phương án triển khai trợ lý AI hỗ trợ kỹ thuật viên dịch vụ tại các xưởng bảo hành.</p>
+          </div>
+
+          <div class="email-item">
+            <div class="email-header">
+              <strong>Khối Vận Hành Vinpearl</strong>
+              <span>07:52</span>
+            </div>
+            <p>Đề nghị triển khai chatbot lễ tân đa ngôn ngữ tại 3 cơ sở trọng điểm.</p>
+          </div>
+
+          <div class="email-item">
+            <div class="email-header">
+              <strong>Ban Chuyển Đổi Số Vinmec</strong>
+              <span>07:35</span>
+            </div>
+            <p>Gửi bản cập nhật pilot trợ lý AI tóm tắt hồ sơ bệnh án cho hội đồng chuyên môn.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card compact-card schedule-card">
+        <div class="compact-top">
+          <h3>📅 Lịch meeting</h3>
+          <a class="schedule-link">Xem lịch đầy đủ <span>→</span></a>
+        </div>
+        <div class="mini-timeline">
+          <div class="mini-timeline-row schedule-row">
+            <div class="time-range">
+              <span>09:00</span>
+              <span>10:00</span>
+            </div>
+            <div class="timeline-dot"></div>
+            <div class="meeting-meta">
+              <strong>Daily Stand-up AI Team</strong>
+              <small>Online Meeting</small>
+            </div>
+          </div>
+          <div class="mini-timeline-row schedule-row">
+            <div class="time-range">
+              <span>11:00</span>
+              <span>12:00</span>
+            </div>
+            <div class="timeline-dot"></div>
+            <div class="meeting-meta">
+              <strong>Review tiến độ dự án AI Assistant</strong>
+              <small>Phòng họp A</small>
+            </div>
+          </div>
+          <div class="mini-timeline-row schedule-row">
+            <div class="time-range">
+              <span>14:00</span>
+              <span>15:00</span>
+            </div>
+            <div class="timeline-dot"></div>
+            <div class="meeting-meta">
+              <strong>Technical Review: LLM Evaluation</strong>
+              <small>Phòng họp B</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="card board-card">
+          <h3>Các Mốc Quan Trọng Sắp Tới</h3>
+          <div class="timeline">
+            <div class="timeline-row">
+              <span>03/07</span>
+              <p>Chốt kiến trúc v2 cho Vpearlian</p>
+              <b class="tag">Công nghệ</b>
+            </div>
+            <div class="timeline-row">
+              <span>08/07</span>
+              <p>Demo hệ điều phối ticket tự động cho Ban Điều Hành</p>
+              <b class="tag">Điều hành</b>
+            </div>
+            <div class="timeline-row">
+              <span>12/07</span>
+              <p>Đánh giá midpoint chương trình AI Upskilling</p>
+              <b class="tag">Nhân sự</b>
+            </div>
+          </div>
+        </div>
+
+                <div class="card board-card">
+          <h3>Công Việc Cần Xử Lý Hôm Nay</h3>
+          <div class="task-list">
+            <div class="task-row">
+              <span>Phê duyệt ngân sách GPU cho môi trường staging</span>
+              <b>11:00</b>
+            </div>
+            <div class="task-row">
+              <span>Phản hồi đề xuất thay đổi phạm vi dự án Copilot Nội Bộ</span>
+              <b>13:30</b>
+            </div>
+            <div class="task-row">
+              <span>Chốt kế hoạch tuyển 2 Senior ML Engineer</span>
+              <b>16:00</b>
+            </div>
+            <div class="task-row">
+              <span>Duyệt bản tóm tắt họp tuần gửi Ban Điều Hành</span>
+              <b>17:30</b>
+            </div>
+          </div>
+        </div>
+
+    </section>
+
+    <section class="executive-layout">
+      <section class="left-column">
+        <div class="board-row">
+          <div class="card board-card">
+            <h3>Chi Phí Hạ Tầng</h3>
+            <div class="progress-item">
+              <div><span>Hạ tầng AI</span><strong>$428k / $490k</strong></div>
+              <div class="bar"><i style="width: 87%"></i></div>
+              <div class="progress-note">87% ngân sách tháng, tăng $32k do mở rộng cụm GPU cho VinFast.</div>
+            </div>
+            <div class="progress-item">
+              <div><span>Sản phẩm dữ liệu</span><strong>$126k / $200k</strong></div>
+              <div class="bar"><i style="width: 63%"></i></div>
+              <div class="progress-note">Chi tiêu ổn định, chủ yếu cho pipeline phân tích hành vi khách hàng Vinpearl.</div>
+            </div>
+            <div class="progress-item">
+              <div><span>Nghiên cứu ứng dụng</span><strong>$87k / $150k</strong></div>
+              <div class="bar"><i style="width: 58%"></i></div>
+              <div class="progress-note">Dư địa còn tốt cho các pilot AI tại Vinmec và khối vận hành tập đoàn.</div>
+            </div>
+          </div>
+
+          <div class="card board-card">
+            <h3>Tình Trạng Tuyển Dụng</h3>
+            <div class="mini-stat-grid" style="margin-top: 28px;">
+              <div>
+                <div class="mini-label">Vị trí mở</div>
+                <div class="mini-value">14</div>
+              </div>
+              <div>
+                <div class="mini-label">Ứng viên vòng cuối</div>
+                <div class="mini-value">6</div>
+              </div>
+              <div>
+                <div class="mini-label">Đề nghị chờ ký</div>
+                <div class="mini-value">3</div>
+              </div>
+              <div>
+                <div class="mini-label">Time-to-hire</div>
+                <div class="mini-value">31 ngày</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="board-row">
+          <div class="card board-card">
+            <h3>Phê Duyệt Đang Chờ Xử Lý</h3>
+            <div class="approval-list">
+              <div><span>Mở rộng cụm vector database</span><b>Hạn: Hôm nay</b></div>
+              <div><span>Gia hạn license công cụ đánh giá LLM</span><b>Hạn: +1 ngày</b></div>
+              <div><span>Điều chỉnh khung lương AI Engineer</span><b>Hạn: +2 ngày</b></div>
+              <div><span>Roadmap tích hợp trợ lý nội bộ</span><b>Hạn: +2 ngày</b></div>
+            </div>
+          </div>
+
+          <div class="card board-card">
+            <h3>Các Quyết Định Gần Đây</h3>
+            <ul class="tight-list">
+              <li>Ưu tiên hoàn thành MVP V-CEO trước đợt demo quý III</li>
+              <li>Phê duyệt triển khai Pilot trợ lý AI nội bộ cho khối vận hành Vinpearl</li>
+              <li>Tăng ngân sách GPU phục vụ các dự án GenAI dùng chung toàn hệ sinh thái</li>
+              <li>Chuẩn hóa nền tảng Graph RAG làm giải pháp tri thức doanh nghiệp cho các đơn vị thành viên</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <aside class="right-column">
+        <section class="chat-card">
+          <div class="chat-header">Trợ Lý AI</div>
+
+          <div id="chat" class="chat-messages">
+            <div class="message assistant">
+              <div class="avatar"><img src="/static/icon.png" alt="V-CEO"></div>
+              <div class="bubble">
+                Xin chào Director,<br>
+                Tôi là V-CEO, trợ lý điều hành AI của bạn.
+                <ul>
+                  <li>Phân tích tình hình dự án và rủi ro</li>
+                  <li>Soạn thông điệp điều hành nhanh</li>
+                  <li>Chuẩn bị tóm tắt cho cuộc họp lãnh đạo</li>
+                  <li>Đề xuất phương án ưu tiên theo mục tiêu quý</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <form class="composer" id="composer">
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Ví dụ: Tóm tắt tình hình dự án V-CEO"
+              required
+            ></textarea>
+
+            <button id="send" type="submit">Gửi</button>
+          </form>
+        </section>
+      </aside>
+    </section>
+  </main>
+</div>
+
+<script src="/static/app.js"></script>
+
+</body>
+</html>
